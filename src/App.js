@@ -9,7 +9,7 @@ import { getDefaultFrom, getDefaultUntil } from "./utils/dates";
 
 function App() {
   const [activePrice, setActivePrice] = useState(DEFAULT_ACTIVE_BUTTON);
-  const [activeHour, setActiveHour] = useState();
+  const [activeHour, setActiveHour] = useState(1);
   const [showSideBar, setShowSideBar] = useState(false);
   const [from, setFrom] = useState(getDefaultFrom());
   const [until, setUntil] = useState(getDefaultUntil());
