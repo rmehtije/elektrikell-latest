@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import { convertToInputFormat, convertToRequestFormat } from "../utils/dates";
 
 function SearchForm({ handleClose, from, until, setFrom, setUntil }) {
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
