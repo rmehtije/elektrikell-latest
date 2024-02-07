@@ -17,6 +17,7 @@ import { getPriceData } from "../services/apiService";
 import { chartDataConvertor } from "../utils";
 import { currentTimeStamp } from "../utils/dates";
 import { getLowPriceInterval } from "../utils/buildIntervals";
+import { getAveragePrice } from "../utils/maths";
 import lodash from "lodash";
 
 function Body({ from, until, activeHour }) {
@@ -69,7 +70,11 @@ function Body({ from, until, activeHour }) {
               dot={renderDot}
             />
             <ReferenceArea x1={x1} x2={x2} stroke="red" strokeOpacity={0.3} />
-            <ReferenceLine y={6} label="Max" stroke="red" strokeDasharray="3 3" />
+            <ReferenceLine
+              y={getAveragePrice(priceData)}
+              label="Average"
+              stroke="grey"
+            />
           </LineChart>
         </ResponsiveContainer>
       </Col>
