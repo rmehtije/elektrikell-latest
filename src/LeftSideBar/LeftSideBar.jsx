@@ -2,6 +2,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import SearchForm from "./SearchForm";
 
 function LeftSideBar({ show, handleClose, ...formProps }) {
+  console.log('LeftSideBar');
   return (
     <Offcanvas show={show} onHide={handleClose}>
       <Offcanvas.Header closeButton>
