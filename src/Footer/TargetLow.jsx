@@ -4,6 +4,7 @@ import Intervals from "./Intervals";
 import Countdown from "react-countdown";
 
 function TargetLow(props) {
+  console.log('TargetLow');
   const { bestUntil } = props;
 
   return (

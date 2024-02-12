@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 
 function About() {
+  console.log('About');
   // const location = useLocation();
   const { who } = useParams();
   // const navigate = useNavigate();

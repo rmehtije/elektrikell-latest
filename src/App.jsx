@@ -4,6 +4,7 @@ import About from "./About";
 import Navigation from "./Navigation";
 
 function App() {
+  console.log('App');
   return (
     <>
       <Navigation />

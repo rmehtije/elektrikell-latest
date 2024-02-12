@@ -3,6 +3,7 @@ import Info from "./Info";
 import Row from "react-bootstrap/Row";
 
 function Head(props) {
+  console.log('Head');
   const { handleOpenSideBar, ...restProps } = props;
   return (
     <>
