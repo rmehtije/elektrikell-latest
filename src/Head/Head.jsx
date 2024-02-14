@@ -2,16 +2,15 @@ import Logo from "./Logo";
 import Info from "./Info";
 import Row from "react-bootstrap/Row";
 
-function Head(props) {
-  console.log('Head');
-  const { handleOpenSideBar, ...restProps } = props;
+function Head() {
+  console.log("Head");
   return (
     <>
       <Row>
-        <Logo handleOpenSideBar={handleOpenSideBar} />
+        <Logo />
       </Row>
       <Row>
-        <Info {...restProps} />
+        <Info />
       </Row>
     </>
   );

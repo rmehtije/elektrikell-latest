@@ -8,9 +8,9 @@ import { getCurrentPrice } from "../services/apiService";
 import { mwToKw, addTax } from "../utils/priceFormats";
 import { ERROR_MESSAGE } from "./constants";
 import { useSelector, useDispatch } from "react-redux";
-import { setActivePrice } from "../services/stateService";
+import { setActivePrice, setErrorMessage } from "../services/stateService";
 
-function Info({ setErrorMessage }) {
+function Info() {
   console.log("Info");
   const dispatch = useDispatch();
 
@@ -26,10 +26,10 @@ function Info({ setErrorMessage }) {
 
         setCurrentPrice(addTax(mwToKw(data[0].price), "ee"));
       } catch {
-        setErrorMessage(ERROR_MESSAGE);
+        dispatch(setErrorMessage(ERROR_MESSAGE));
       }
     })();
-  }, [setErrorMessage]);
+  }, [dispatch]);
 
   return (
     <>
