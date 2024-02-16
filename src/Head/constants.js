@@ -1,5 +1,6 @@
 export const LOW = "low";
 export const HIGH = "high";
+export const AVERAGE = "average";
 
 export const BADGES = [
   {
@@ -9,6 +10,10 @@ export const BADGES = [
   {
     name: "danger",
     id: HIGH,
+  },
+  {
+    name: "info",
+    id: AVERAGE,
   },
 ];
 
